@@ -3,10 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+    <!-- boxicons -->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!--Font  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- style -->
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
     <title>Document</title>
 </head>
-<body>
-    <h1>Hello</h1>
+<body class="bg-background">
+  <!-- header -->
+  <header class="fixed top-0 right-0 left-0 md:py-1 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto bg-gray-800 md:bg-transparent p-5">
+        <div class="flex justify-between">
+            <a href="/" class="text-white font-bold text-lg flex items-center gap-3"><img src="./src/img/logo.png" alt="" width="50">Portfolio</a>
+
+            <!-- nav for large screen -->
+            <div class="hidden md:flex space-x-10">
+                <a href="#home" class="text-primary hover:text-gray-300 ">Home</a>
+                <a href="#about" class="text-white hover:text-gray-300">About</a>
+                <a href="#projects" class="text-white hover:text-gray-300">Projects</a>
+            </div>
+
+            <!-- menu btn display only on mobile screen-->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white text-3xl">
+                    <i class='bx bx-menu'></i>
+
+                </button>
+
+            </div>
+
+           
+           
+
+        </div>
+         <!-- mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#home" class="text-primary hover:text-gray-300 block py-2 hover:bg-gray-700">Home</a>
+            <a href="#about" class="text-white hover:text-gray-300 block py-2 hover:bg-gray-700">About</a>
+            <a href="#projects" class="text-white hover:text-gray-300 block py-2 hover:bg-gray-700">Projects</a>
+            </div>
+
+    </nav>
+  </header>
+
+  <!-- banner section -->
+  <section class="max-w-7xl mx-auto px-5 my-12" id="home">
+    <div class="py-10 text-white flex flex-col md:flex-row justify-between items-center gap-4">
+        <!-- left side of the main page -->
+        <div class="md:w-1/2">
+            <p class="text-xl font-inter font-bold mb-8 tracking-[3.22px]">Hello, <span class="text-primary">I'm</span></p>
+            <h1 class="text-3xl font-bold tracking-[3.22px] mb-8 font-inter">Mohamed Abdisalaan</h1>
+            <p class="text-2xl font-monstserrat mb-8">Frontend Developer</p>
+            <p class="text-xl mb-8 md:w-3/4 text-justify leading-8"> I am dedicated to my craft and do all possible to help my clients.</p>
+            <button class="py-2 px-10 rounded-md bg-primary text-white font-bold hover:bg-indigo-600">Let's Talk</button>
+            <!-- social buttons -->
+            <div class="mt-8 mb-8 flex gap-4 items-center">
+                <p>My Socials:</p>
+                <div class="flex space-x-3 ">
+                <a href="#"><i class="fa-brands fa-square-instagram w-8 h-8 mt-4"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin w-8 h-8 mt-4"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter w-8 h-8 mt-4"></i></a>
+                <a href="#"><i class="fa-brands fa-behance w-8 h-8 mt-4"></i></a>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- right side of the main page -->
+        <div class="featured-image">
+        <div class="md:w-1/2 image order-first md:order-none">
+            <img src="./src/img/IMG_2545.JPG" alt="" class="w-full md:ml-20 " >
+        </div>
+    </div>
+
+         
+
+    </div>
+
+  </section>
+
+  <!-- about section -->
+  <section class="max-w-7xl mx-auto px-5 my-6 text-white" id="about">
+    <div class="text-center">
+        <h3 class="text-3xl font-bold mb-5 mt-8">My <span class="text-primary">Services</span></h3>
+    </div>
+    <!-- service cards -->
+    <div class="my-16 flex flex-col md:flex-row justify-between items-center gap-12 w-1/3 mt-8">
+        <div class="w-[354px] px-5 py-8 rounded-lg  border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl ">
+            <img src="/src/img/graphic-design.svg" alt="" class="w-[196px] mb-12 mx-auto">
+            <h5 class="text-center my-5 text-xl font-bold text-primary mt-4">Graphic Designer</h5>
+            <p class="text-justify">Creating visually appealing designs that communicate effectively.</p>
+        </div>
+        <div class="w-[354px] px-5 py-8 rounded-lg  border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl">
+            <img src="/src/img/web-design.svg" alt="" class="w-[196px] mb-12 mx-auto">
+            <h5 class="text-center my-5 text-xl font-bold text-primary">Web Designer</h5>
+            <p class="text-justify">To craft digital experiences that seamlessly blend aesthetics with functionality.</p>
+        </div>
+        <div class="w-[354px] px- py-8 rounded-lg  border-primary shadow-[#5dadec3b] cursor-pointer shadow-xl" >
+            <img src="/src/img/ux-design.svg" alt="" class="w-[196px] mb-12 mx-auto">
+            <h5 class="text-center my-5 text-xl font-bold text-primary">UX Designer</h5>
+            <p class="text-justify">Crafting seamless digital experiences that prioritize user satisfaction and functionality.</p>
+        </div>
+    </div>
+
+  </section>
+
+  <!-- projects -->
+  <section class="px-5 my-32 mx-auto max-w-7xl" id="projects">
+    <div class="text-center text-white">
+    <h3 class="text-3xl font-bold mb-5 mt-8">Recent <span class="text-primary">Projects</span></h3>
+    <p class="text-xl font-monstserrat mb-5">Here are some of my recent projects</p>
+    </div>
+
+    <!-- projects -->
+    <div class="flex flex-col justify-between items-center gap-8 my-20">
+        <div class=" border-primary shadow-xl shadow-[#5dadec3b] md:w[741px] md:h-96 mx-auto rounded-2xl p-5 md:p-0 ">
+        <img src="./src/img/project-1.svg" alt="" class="p-5 w-full cursor-pointer">
+       </div>
+       <div class=" border-primary shadow-xl shadow-[#5dadec3b] md:w[741px] md:h-96 mx-auto rounded-2xl p-5 md:p-0 ">
+        <img src="./src/img/project-2.svg" alt="" class="p-5 w-full cursor-pointer hover:scale-105">
+       </div>
+    </div>
+
+ 
+
+  </section>
+
+
+  <!-- footer -->
+  <footer class="max-w-7xl mx-auto px-5 my-16">
+    <h4 class="text-white font-bold text-2xl pt-12 mb-8">Portfolio</h4>
+    <div class="text-white md:ml-16 flex flex-col md:flex-row justify-between md:items-center gap-6">
+        <div class="w-1/3">
+            <h3 class="mb-3 text-white font-bold">Company</h3> 
+            <a href="#" class="block my-2 text-sm text-slate-300">About me</a>
+            <a href="#" class="block my-2 text-sm text-slate-300">Why choose me</a>
+            <a href="#" class="block my-2 text-sm text-slate-300">Pricing</a>
+            <a href="#" class="block my-2 text-sm text-white">Contacts</a>
+        </div>
+        <div class="w-1/3">
+            <h3 class="mb-3 text-white font-bold">Resources</h3> 
+            <a href="#" class="block my-2 text-sm text-white">Privacy policy</a>
+            <a href="#" class="block my-2 text-sm text-white">Terms and conditions</a>
+            <a href="#" class="block my-2 text-sm text-white">Blog</a>
+            <a href="#" class="block my-2 text-sm text-white">Credentials</a>
+        </div>
+        <div class="w-1/3">
+            <h5 class="mb-5 text-white font-bold">Subscribe to our Newsletter</h5>
+            <div class="relative">
+                <input type="email" name="email" id="email" placeholder="Enter your Email" class="bg-[##282E3C] py-5 pl-5 rounded-lg ">
+                <input type="submit" value="Subscribe" class="bg-primary py-5 px-10 rounded-lg text-white absolute cursor-pointer">
+            </div> 
+     
+        </div>
+
+    </div>
+
+    <div class="text-center"> 
+        <p class="text-white mt-4  ">Copyright © 2024. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+
+
+<!-- script js -->
+<script src="./src/app.js"></script>
+
 </body>
 </html>
